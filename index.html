@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB" crossorigin="anonymous"></script>
+</head>
+<body>
+<form id="account" action="" method="post">
+  <select id="rate-value">
+    <option value="0">Please Choose &hellip;</option>
+    <option value="1">1 year</option>
+    <option value="2">2 years</option>
+    <option value="3">3 years</option>
+  </select>
+  <input type="text" id="value" value="">
+</form>
+<script>
+  $("#rate-value").change(function() {
+    var rate;
+    switch($('#rate-value').val()) {
+    case '1':
+        rate = 179;
+        break;
+    case '2':
+        rate = 169;
+        break;
+    case '3':
+        rate = 159;
+        break;
+    default:
+        rate = 199;
+    }
+    $("#value").val(rate);
+  });
+</script>
+</body>
+</html>
